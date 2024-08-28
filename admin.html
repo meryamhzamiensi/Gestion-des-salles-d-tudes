@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudyFlow</title>
+    <link rel="stylesheet" href="admin.css">
+    <link rel="stylesheet" href="style.css">
+
+
+</head>
+<body>
+    <div id="sidebar">
+        <div class="brand">Admin Panel</div>
+        <div class="side-menu">
+            <ul>
+                <li><a href="index.html" >Dashboard</a></li>
+                <li><a href="#">Admin-Page</a></li>
+                
+            </ul>
+        </div>
+    </div>
+    <div id="content">
+        <header>
+            <div class="nav-link">
+                <a href="login-signup.html">Login/Signup</a>
+            </div>
+        </header>
+        <main>
+            <section class="reservation-requests">
+                <h2>Room Reservation Requests</h2>
+                <table id="requests-table">
+                    <thead>
+                        <tr>
+                            <th>Request ID</th>
+                            <th>Room</th>
+                            <th>Requester</th>
+                            <th>Date</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Dynamic rows will be inserted here -->
+                    </tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+    <script src="admin.js"></script>
+</body>
+</html>
