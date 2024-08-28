@@ -1,5 +1,4 @@
-// SIDEBAR DROPDOWN
-const allDropdown = document.querySelectorAll('#sidebar .side-menu .side-dropdown'); // Adjusted selector to target dropdowns properly
+const allDropdown = document.querySelectorAll('#sidebar .side-menu .side-dropdown');
 const sidebar = document.getElementById('sidebar');
 
 allDropdown.forEach(item => {
@@ -20,19 +19,16 @@ allDropdown.forEach(item => {
     });
 });
 
-// SIDEBAR COLLAPSE (removed, as sidebar is now fixed and always visible)
 
-// PROFILE DROPDOWN
 const profile = document.querySelector('header .nav-link');
 const dropdownProfile = document.querySelector('.profile-link');
 
-if (profile) { // Added check to ensure profile element exists
+if (profile) { 
     profile.addEventListener('click', function () {
         dropdownProfile.classList.toggle('show');
     });
 }
 
-// MENU (if applicable for other sections, adapt to your layout)
 const allMenu = document.querySelectorAll('main .content-data .head .menu');
 
 allMenu.forEach(item => {
@@ -48,7 +44,7 @@ allMenu.forEach(item => {
 
 window.addEventListener('click', function (e) {
     if (e.target !== profile && e.target !== dropdownProfile) {
-        if (dropdownProfile && dropdownProfile.classList.contains('show')) { // Added check to ensure dropdownProfile exists
+        if (dropdownProfile && dropdownProfile.classList.contains('show')) { 
             dropdownProfile.classList.remove('show');
         }
     }
@@ -58,23 +54,21 @@ window.addEventListener('click', function (e) {
         const menuLink = item.querySelector('.menu-link');
 
         if (e.target !== icon && e.target !== menuLink) {
-            if (menuLink && menuLink.classList.contains('show')) { // Added check to ensure menuLink exists
+            if (menuLink && menuLink.classList.contains('show')) { 
                 menuLink.classList.remove('show');
             }
         }
     });
 });
 
-// PROGRESSBAR
 const allProgress = document.querySelectorAll('main .card .progress');
 
 allProgress.forEach(item => {
-    if (item.dataset.value) { // Added check to ensure data-value exists
+    if (item.dataset.value) { 
         item.style.setProperty('--value', item.dataset.value);
     }
 });
 
-// APEXCHART
 var options = {
     series: [{
         name: 'Available Rooms',
@@ -105,25 +99,23 @@ var options = {
 };
 
 var chart = new ApexCharts(document.querySelector("#chart"), options);
-if (chart) { // Added check to ensure chart element exists
+if (chart) { 
     chart.render();
 }
 
-// Handle "Reserve" button click to redirect to reservation form
 const reserveButtons = document.querySelectorAll('.btn-reserve');
 
 reserveButtons.forEach(button => {
     button.addEventListener('click', function () {
-        const roomId = this.getAttribute('data-room-id'); // Use getAttribute to get data-room-id
+        const roomId = this.getAttribute('data-room-id'); 
         if (roomId) { // Check if roomId exists
             window.location.href = 'reservation-form.html?roomId=' + roomId;
         }
     });
 });
 
-// Handle login icon click
 const loginIcon = document.getElementById('login-icon');
-if (loginIcon) { // Added check to ensure loginIcon element exists
+if (loginIcon) { 
     loginIcon.addEventListener('click', function() {
         window.location.href = 'login-signup.html';
     });
