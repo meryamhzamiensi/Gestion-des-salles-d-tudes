@@ -10,7 +10,6 @@
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 </head>
 <body>
-    <!-- SIDEBAR -->
     <aside id="sidebar">
         <div class="brand">
             <span>StudyFlow</span>
@@ -23,9 +22,7 @@
         </nav>
     </aside>
 
-    <!-- CONTENT -->
     <div id="content">
-        <!-- NAVBAR -->
         <header>
             <nav class="nav-link">
                 <a href="login-signup.html" id="login-icon" aria-label="Login/Signup">
@@ -34,19 +31,15 @@
             </nav>
         </header>
 
-        <!-- MAIN CONTENT -->
         <main>
             <h1 class="title">Classroom Data</h1>
 
-            <!-- Chart Section -->
             <div id="chart" style="max-width: 650px; margin: 35px auto;"></div>
 
             <script>
-                // Get the room number from the URL
                 const urlParams = new URLSearchParams(window.location.search);
                 const room = urlParams.get('room');
 
-                // Example data (replace with actual data for each room)
                 const temperatureData = [22, 24, 23, 21, 25, 26, 24];
                 const noiseData = [30, 35, 40, 38, 45, 50, 55];
                 const luminosityData = [300, 350, 330, 400, 450, 480, 500];
