@@ -3,18 +3,17 @@
 
 // Informations Wi-Fi
 const char* ssid = "TOPNET_EE30";
-const char* password = "hzami123";
+const char* password = "****";
 
 // Informations Ubidots
 #define UBIDOTS_TOKEN "BBUS-8HLdoXmIzsPcMMs9I4f2t8F9uLpZpZ"
-#define UBIDOTS_ORG "your_org_name" // Replace with your Ubidots organization name (if applicable)
-#define UBIDOTS_DEVICE "your_device_name" // Replace with your Ubidots device name
+#define UBIDOTS_DEVICE "Salle1" 
 
 // Initialize Ubidots
 Ubidots ubidots(UBIDOTS_TOKEN);
 
 // Initialiser le capteur DHT
-#define DHTPIN 15 // Pin pour le capteur de température
+#define DHTPIN 15 
 #define DHTTYPE DHT22
 DHT dht(DHTPIN, DHTTYPE);
 
